@@ -1,0 +1,71 @@
+.design {
+    padding: 88px 0 40px;
+    position: relative;
+    &::after {
+        content: url(../img/shapes/Blob2.svg);
+        position: absolute;
+        bottom: -300px;
+        right: -190px;
+        z-index: -2;
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 900px) {
+            flex-direction: column;
+            align-content: center;
+            text-align: center;
+        }
+    }
+
+    &__img {
+        max-width: 570px;
+        margin-right: calc(20px + (79 - 20) * ((100vw - 320px) / (1200 - 320)));
+        img {
+            width: 100%;
+        }
+        @media (max-width: 900px) {
+            max-width: 30%;
+            text-align: center;
+            margin-right: 0;
+        }
+    }
+
+    &__content {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 900px) {
+            max-width: 80%;
+            align-items: center;
+            margin-right: 0;
+        }
+
+    }
+
+    &__tag {
+        @media (max-width: 500px) {
+            margin-top: 20px;
+        }
+    }
+
+    &__title {
+        font-size: calc(25px + (46 - 25) * ((100vw - 320px) / (1200 - 320)));
+        line-height: calc(35px + (62 - 35) * ((100vw - 320px) / (1200 - 320)));
+        margin-top: calc(13px + (15 - 13) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    &__text {
+        margin-top: calc(15px + (24 - 15) * ((100vw - 320px) / (1200 - 320)));
+        @media (max-width: 500px) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        max-width: 194px;
+        padding: 14px 69px 14px 17px;
+        margin-top: calc(38px + (40 - 38) * ((100vw - 320px) / (1200 - 320)));
+    }
+}

@@ -1,0 +1,102 @@
+.service {
+    padding-top: 100px;
+    min-height: 100vh;
+    position: relative;
+    &::before {
+        content: url(../img/shapes/Blob1.svg);
+        position: absolute;
+        left: -210px;
+        top: -90px;
+        z-index: -2;
+    }
+    &__tag {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: calc(40px + (50 - 40) * ((100vw - 320px) / (1200 - 320)));
+        line-height: calc(50px + (72 - 50) * ((100vw - 320px) / (1200 - 320)));
+        text-align: center;
+    }
+}
+.title {
+}
+.advantages {
+    margin-top: calc(20px + (48 - 20) * ((100vw - 320px) / (1200 - 320)));
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        @media (max-width: 1110px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $md3+px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__item {
+        background-color: #FFF1F9;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 53px 23px 53px 23px;
+        margin-top: 10px;
+        transition: all .3s ease 0s;
+        align-self: start;
+        &_active {
+            background-color: $darkPink;
+            box-shadow: 10px 10px 20px rgba(250, 141, 184, 0.2);
+
+            .advantages {
+                &__icon, &__name, &__description {
+                    color: #FCFCFC;
+                }
+                &__more {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 43px;
+        color: $darkPink;
+    }
+
+    &__name {
+        font-size: 34px;
+        line-height: 72px;
+        color: #56597A;
+        font-weight: 500;
+        margin-top: 38px;
+        text-align: center;
+    }
+
+    &__description {
+        font-size: 16px;
+        font-family: $proxima;
+        line-height: 24px;
+        color: $grayColor;
+        text-align: center;
+    }
+
+    &__more {
+        color: #fcfcfc;
+        font-weight: 500;
+        position: relative;
+        top: 40px;
+        display: none;
+        &::after {
+            content: '\e902';
+            font-family: 'icomoon';
+            color: #fcfcfc;
+            font-size: 10px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            position: absolute;
+        }
+    }
+}

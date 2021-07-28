@@ -1,0 +1,79 @@
+.teamwork {
+    padding: 88px 0 40px;
+    position: relative;
+    &:before {
+        content: url(../img/shapes/Blob3.svg);
+        position: absolute;
+        bottom: -300px;
+        left: -230px;
+        z-index: -2;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 900px) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+    }
+
+    &__img {
+        max-width: 587px;
+        img {
+            width: 100%;
+        }
+        @media (max-width: 900px) {
+            max-width: 30%;
+        }
+    }
+
+    &__content {
+        max-width: 500px;
+        margin-right: calc(20px + (87 - 20) * ((100vw - 320px) / (1200 - 320)));
+        @media (max-width: 900px) {
+            align-items: center;
+            max-width: 80%;
+            margin-right: 0;
+        }
+    }
+
+    &__tag {
+        @media (max-width: 500px) {
+            margin-top: 20px;
+        }
+    }
+
+    &__title {
+        font-size: calc(25px + (46 - 25) * ((100vw - 320px) / (1200 - 320)));
+        line-height: calc(35px + (62 - 35) * ((100vw - 320px) / (1200 - 320)));
+        margin-top: 15px;
+    }
+
+    &__text {
+        margin-top: 24px;
+        @media (max-width: 500px) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        margin-top: 40px;
+        max-width: 194px;
+        padding: 14px 72px 14px 14px;
+        @media (max-width: 900px) {
+            margin: 40px auto 0 auto;
+        }
+    }
+}
+.container {
+}
+.category {
+}
+.title {
+}
+.text {
+}
+.button {
+}

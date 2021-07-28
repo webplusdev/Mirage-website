@@ -1,0 +1,197 @@
+.testimonial {
+    padding: 88px 0 90px;
+    &__container {
+        position: relative;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 900px) {
+
+        }
+    }
+
+    &__img {
+        max-width: 416px;
+        background-color: $darkPink;
+        padding: 35px 54px;
+        border-radius: 8px;
+        margin-right: 137px;
+        img {
+            width: 100%;
+        }
+        @media (max-width: $md2+px) {
+            margin-right: 110px;
+
+        }
+        @media (max-width: $md3+px) {
+            margin-right: 50px;
+        }
+        @media (max-width: 680px) {
+            display: none;
+        }
+        @media (max-width: $md4+px) {
+            margin-right: 20px;
+        }
+    }
+
+    &__content {
+        max-width: 506px;
+        @media (max-width: 680px) {
+            max-width: 90%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media (max-width: $md4+px) {
+            max-width: 100%;
+        }
+    }
+
+    &__tag {
+        @media (max-width: $md3 + px) {
+            font-size: 25px;
+        }
+    }
+
+    &__title {
+        font-size: calc(25px + (44 - 25) * ((100vw - 320px) / (1200 - 320)));
+        line-height: calc(35px + (60 - 35) * ((100vw - 320px) / (1200 - 320)));
+        margin-top: 15px;
+        @media (max-width: $md3 + px) {
+            margin-top: 5px;
+        }
+    }
+
+    &__text {
+        margin-top: calc(10px + (38 - 10) * ((100vw - 320px) / (1200 - 320)));
+        max-width: 400px;
+        @media(max-width: 680px) {
+            max-width: 100%;
+        }
+        @media(max-width: $md4+px) {
+            font-size: 16px;
+        }
+        @media(max-width: 350px) {
+            
+        }
+
+    }
+
+    &__author {
+        font-family: 'Proxima Nova';
+        margin-top: 23px;
+        position: relative;
+        @media (max-width: 680px) {
+            margin-top: 35px;
+            padding-left: 80px;
+            &::before {
+                content: '';
+                background: url(../img/main/testimonial.svg) center center no-repeat;
+                background-size: 50px 50px;
+                border-radius: 10px;
+                width: 70px;
+                height: 70px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $darkPink;
+            }
+        }
+    }
+
+    &__name {
+        font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1200 - 320)));
+        line-height: calc(16px + (32 - 16) * ((100vw - 320px) / (1200 - 320)));
+        color: $darkGrayColor;
+        font-weight: 700;
+    }
+
+    &__location {
+        font-size: 16px;
+        line-height: 32px;
+        color: $lightGrayColor;
+        margin-top: 5px;
+        @media (max-width: $md4+px) {
+            font-size: 14px;
+        }
+    }
+}
+
+/* .swiper-slide {
+    transition: opacity .3s ease 0s;
+    opacity: 0;
+}
+.swiper-slide-active {
+    transition: opacity .3s ease 0s;
+    opacity: 1;
+} */
+
+.testimonial__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    z-index: 3;
+    min-width: 80px;
+    min-height: 30px;
+    @media (max-width: $md3 + px) {
+        bottom: -80px;
+        left: 50%;
+        transform: translate(-50%);
+        min-width: 250px;
+    }
+    @media (max-width: $md4 + px) {
+        bottom: -80px;
+        left: 50%;
+        transform: translate(-50%);
+        min-width: 170px;
+    }
+
+}
+
+.swiper-button {
+    color: $grayColor;
+    font-size: 10px;
+    cursor: pointer;
+    transition: all .2s ease 0s;
+    @media(any-hover: hover) {
+        &:hover {
+            color: $darkPink;
+            font-size: 12px;
+        }
+    }
+
+    @media(max-width: $md3 + px) {
+        font-size: 20px;
+        background-color: $darkPink;
+        border-radius: 50%;
+        padding: 40px 40px;
+        color: #fcfcfc;
+    }
+    @media(max-width: 620px) {
+        font-size: 15px;
+        padding: 30px 30px;
+    }
+
+}
+
+.swiper-button-prev {
+    transform: rotate(-180deg);
+    margin-right: 10px;
+    &::after {
+        content: none;
+    }
+} 
+
+
+.swiper-button-next {
+    &::after {
+        content: none;
+    }
+}

@@ -1,0 +1,29 @@
+.brands {
+    padding-top: 88px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        font-size: 42px;
+        color: #C1C1C1;
+        @media (max-width: 800px) {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        @media (max-width: 800px) {
+            text-align: center;
+            flex: 1 1 33.333%;
+            margin: 15px 0;
+        }
+        @media (max-width: 605px) {
+            flex: 1 1 50%;
+        }
+        @media (max-width: $md4+px) {
+            font-size: 32px;
+        }
+    }
+
+}
+

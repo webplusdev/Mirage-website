@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Circular';
+    src: url('../fonts/CircularStd-Book.woff') format('woff');
+    src: url('../fonts/CircularStd-Book.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular';
+    src: url('../fonts/CircularStd-Medium.woff') format('woff');
+    src: url('../fonts/CircularStd-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Circular';
+    src: url('../fonts/CircularStd-Bold.woff') format('woff');
+    src: url('../fonts/CircularStd-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?sx0n19');
+  src:  url('fonts/icomoon.eot?sx0n19#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?sx0n19') format('truetype'),
+    url('../fonts/icomoon.woff?sx0n19') format('woff'),
+    url('../fonts/icomoon.svg?sx0n19#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-microsoft:before {
+  content: "\e90d";
+  color: #c1c1c1;
+}
+.icon-natgeo:before {
+  content: "\e90e";
+  color: #c1c1c1;
+}
+.icon-ferrari:before {
+  content: "\e90f";
+  color: #c1c1c1;
+}
+.icon-google1:before {
+  content: "\e910";
+  color: #c1c1c1;
+}
+.icon-d:before {
+  content: "\e900";
+}
+.icon-arrow:before {
+  content: "\e901";
+}
+.icon-arrowdown:before {
+  content: "\e902";
+}
+.icon-cubes:before {
+  content: "\e903";
+}
+.icon-email:before {
+  content: "\e904";
+}
+.icon-facebook:before {
+  content: "\e905";
+}
+.icon-illustr:before {
+  content: "\e906";
+}
+.icon-instagram:before {
+  content: "\e907";
+}
+.icon-menu:before {
+  content: "\e908";
+}
+.icon-suitcase:before {
+  content: "\e909";
+}
+.icon-twitter:before {
+  content: "\e90a";
+}
+.icon-web:before {
+  content: "\e90b";
+}
+.icon-yt:before {
+  content: "\e90c";
+}
+.icon-google:before {
+  content: "\ea88";
+}

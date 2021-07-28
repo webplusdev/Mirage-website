@@ -1,0 +1,91 @@
+.main-screen {
+    height: 100vh;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 150px;
+        @media (max-width: $md3+px) {
+            justify-content: center;
+            padding-top: 130px;
+        }
+    }
+
+    &__content {
+        max-width: 660px;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: $md3+px) {
+            max-width: 100%;
+            text-align: center;
+            align-items: center;
+        }
+        @media (max-width: $md4+px) {
+            margin-top: 50px;
+        }
+    }
+
+    &__tag {
+        font-weight: 500;
+        font-size: calc(18px + (28 - 18) * ((100vw - 320px) / (1200 - 320)));
+        line-height: 40px;
+        color: $darkPink;
+        position: relative;
+        padding-left: 43px;
+        &::before {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            content: '';
+            width: 36px;
+            height: 3px;
+            background: $darkPink;
+        }
+        @media (max-width: $md3+px) {
+            padding-left: 0;
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        font-size: calc(40px + (64 - 40) * ((100vw - 320px) / (1200 - 320)));
+        line-height: calc(45px + (70 - 45) * ((100vw - 320px) / (1200 - 320)));
+        margin-top: calc(26px + (29 - 26) * ((100vw - 320px) / (1200 - 320)));
+    }
+
+    &__text {
+        font-family: 'Proxima Nova', 'Arial', 'sans-serif';
+        font-size: calc(18px + (20 - 18) * ((100vw - 320px) / (1200 - 320)));
+        line-height: calc(24px + (32 - 24) * ((100vw - 320px) / (1200 - 320)));
+        color: $grayColor;
+        margin-top: 24px;
+        max-width: 537px;
+        @media (max-width: 426px) {
+            display: none;
+        }
+    }
+
+    &__btn {
+        padding: 18px 85px 18px 22px;
+        margin-top: 42px;
+        max-width: 216px;
+        @media (max-width: $md3+px) {
+            margin-top: 45px;
+        }
+
+    }
+
+    &__img {
+        max-width: 532px;
+        img {
+            width: 100%;
+        }
+        @media (max-width: $md3+px) {
+            display: none;
+        }
+    }
+}
+
+

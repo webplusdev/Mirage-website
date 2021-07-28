@@ -1,0 +1,115 @@
+.subscribe {
+    padding: 88px 0 130px;
+    position: relative;
+    &::after {
+        content: url(../img/shapes/Blob4.svg);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -250px;
+        z-index: -2;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        &::before {
+            content: url(../img/main/subscribe.svg);
+            position: absolute;
+            left: -103px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -2;
+            @media (max-width: $md3+px) {
+                left: -110px;
+                top: 90%;
+            }
+        }
+
+    }
+
+    &__title {
+        font-size: calc(25px + (44 - 25) * ((100vw - 320px) / (1200 - 320)));
+        line-height: calc(35px + (60 - 35) * ((100vw - 320px) / (1200 - 320)));
+        text-align: center;
+    }
+
+    &__text {
+        margin-top: calc(14px + (18 - 14) * ((100vw - 320px) / (1200 - 320)));
+        max-width: 500px;
+        text-align: center;
+        @media (max-width: 350px) {
+            display: none;
+        }
+    }
+
+    &__form {
+        max-width: 706px;
+        width: 100%;
+        position: relative;
+        margin-top: 45px;
+        
+        &::before {
+            content: '\e904';
+            font-family: 'icomoon';
+            color: #D2D2D2;;
+            position: absolute;
+            font-size: 14px;
+            z-index: 6;
+            left: 27px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @media (max-width: $md3+px) {
+            text-align: center;
+            max-width: 90%;
+            &::before {
+                font-size: 10px;
+                left: 15px;
+            }
+        }
+        @media (max-width: $md4+px) {
+            font-size: 14px;
+        }
+        @media (max-width: 350px) {
+            margin-top: 30px;
+        }
+    }
+
+    &__input {
+        background: #fcfcfc;
+        border-radius: 4px;
+        padding: 28px 200px 22px 60px;
+        max-width: 706px;
+        width: 100%;
+        font-size: 20px;
+        line-height: 32px;
+        color: #d2d2d2;
+        font-family: 'Proxima Nova';
+        box-shadow: 20px 20px 40px rgba(205, 205, 205, 0.25);
+        @media (max-width: $md3+px) {
+            font-size: 16px;
+            width: 100%;
+            padding: 18px 0 18px 40px
+        }
+        @media (max-width: $md4+px) {
+            font-size: 14px;
+        }
+    }
+
+    &__btn {
+        max-width: 180px;
+        padding: 12px 69px 12px 17px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 13px;
+        @media (max-width: $md3+px) {
+            top: 120%;
+            left: 50%;
+            transform: translate(-50%);
+            min-width: 100%;
+        }
+    }
+}

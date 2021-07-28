@@ -1,0 +1,154 @@
+@import 'fonts';
+@import 'vars';
+@import 'mixins';
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+ul,
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    background-color: #FCFCFC;
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    &::after {
+        content: url('../img/shapes/main-screen-line.svg');
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -4;
+    }
+    &::before {
+        content: url('../img/shapes/main-screen-fill.svg');
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -5;
+    }
+}
+
+.page {
+    flex: 1;
+
+}
+
+.button {
+    background: $darkPink;
+    border-radius: 4px;
+    box-shadow: 10px 10px 20px rgba(250, 141, 184, 0.2);
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    background-color: $darkPink;
+    color: #FCFCFC;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease 0s;
+    &::before {
+        content: '\e901';
+        position: absolute;
+        font-family: 'icomoon';
+        right: 37px;
+        top: 50%;
+        font-size: 13px;
+        transform: translateY(-50%);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        background: rgba(255, 193, 218, 0.28);
+        border: 1.5px solid #FCFCFC;
+        border-radius: 2px;
+        right: 23px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #EF669D;
+        }
+    }
+}
+
+.category {
+    font-weight: 500;
+    line-height: 40px;
+    color: $darkPink;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+
+.title {
+    font-weight: 700;
+    color: $darkGrayColor;
+    text-transform: capitalize;
+}
+
+.text {
+    font-family: 'Proxima', 'Arial', 'sans-serif';
+    font-size: calc(18px + (19 - 18) * ((100vw - 320px) / (1200 - 320)));
+    line-height: calc(24px + (32 - 24) * ((100vw - 320px) / (1200 - 320)));
+    color: $grayColor;
+}
+
+@import 'header';
+@import 'menu-icon';
+@import 'main-screen';
+@import 'services';
+@import 'design';
+@import 'teamwork';
+@import 'testimonial';
+@import 'brands';
+@import 'subscribe';
+@import 'footer';
+
+
+
+
