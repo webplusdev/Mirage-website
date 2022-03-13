@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://webplusdev.github.io/mirage-website",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,6 +13,7 @@
   "devDependencies": {
     "browser-sync": "^2.27.4",
     "del": "^6.0.0",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cli": "^2.3.0",
@@ -22,6 +25,5 @@
     "gulp-uglify-es": "^2.0.0",
     "jquery": "^3.6.0",
     "sass": "^1.35.1"
-  },
-  "dependencies": {}
+  }
 }
